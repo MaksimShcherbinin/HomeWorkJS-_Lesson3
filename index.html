@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <script>
         // Task_1
         let calculateCubeNumber = userNumberTask1 => userNumberTask1 ** 3;
@@ -29,12 +30,12 @@
         calculateUserSalary(userNumberTask2);
 
         // Task_3
-        let getMaxNumber = (number1, number2, number3) => {
-            if (number1 > number2 && number1 > number3) {
-                return number1;
-            } else if (number2 > number1 && number2 > number3) {
-                return number2;
-            } else return number3;
+        let getMaxNumber = (num1, num2, num3) => {
+            if (num1 > num2 && num1 > num3) {
+                return num1;
+            } else if (num2 > num1 && num2 > num3) {
+                return num2;
+            } else return num3;
 
         }
 
@@ -43,7 +44,13 @@
         let userNumberTask3_3 = Number(prompt("Введите третье число:"));
 
         console.log(`Максимальное значение: ${getMaxNumber(userNumberTask3_1, userNumberTask3_2, userNumberTask3_3)}`);
+
         // Task_4
+        let calculateSum = (num1, num2) => num1 + num2;
+        let calculateDifference = (num1, num2) => (num1 > num2) ? num1 - num2 : num2 - num1;
+        let calculateMultiplication = (num1, num2) => num1 * num2;
+        let calculateDivision = (num1, num2) => num1 / num2;
+
 
     </script>
 </body>
