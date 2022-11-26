@@ -11,24 +11,38 @@
 <body>
     <script>
         // Task_1
-        let getCubeNumber = userNumber1 => userNumber1 ** 3;
+        let calculateCubeNumber = userNumberTask1 => userNumberTask1 ** 3;
 
-        console.log(getCubeNumber(2) + getCubeNumber(3));
+        console.log(calculateCubeNumber(2) + calculateCubeNumber(3));
 
         // Task_2
         let calculateUserSalary = userSalaryFull => {
             console.log(`Размер заработной платы за вычетом налогов равен: ${userSalaryFull * 0.87}`);
         };
 
-        let userNumber2 = Number(prompt("Введите размер з.п.:"));
-        alert(typeof (userNumber2));
-        while (isNaN(userNumber2) || !userNumber2) {
-            userNumber2 = prompt(`Введенное значение задано неверно, пустое или равно нулю. Введите корректно размер з.п.:`);
+        let userNumberTask2 = Number(prompt("Введите размер з.п.:"));
+        alert(typeof (userNumberTask2));
+        while (isNaN(userNumberTask2) || !userNumberTask2) {
+            userNumberTask2 = prompt(`Введенное значение задано неверно, пустое или равно нулю. Введите корректно размер з.п.:`);
         }
 
-        calculateUserSalary(userNumber2);
-        // Task_3
+        calculateUserSalary(userNumberTask2);
 
+        // Task_3
+        let getMaxNumber = (number1, number2, number3) => {
+            if (number1 > number2 && number1 > number3) {
+                return number1;
+            } else if (number2 > number1 && number2 > number3) {
+                return number2;
+            } else return number3;
+
+        }
+
+        let userNumberTask3_1 = Number(prompt("Введите первое число:"));
+        let userNumberTask3_2 = Number(prompt("Введите второе число:"));
+        let userNumberTask3_3 = Number(prompt("Введите третье число:"));
+
+        console.log(`Максимальное значение: ${getMaxNumber(userNumberTask3_1, userNumberTask3_2, userNumberTask3_3)}`);
         // Task_4
 
     </script>
