@@ -16,7 +16,17 @@
         console.log(getCubeNumber(2) + getCubeNumber(3));
 
         // Task_2
+        let calculateUserSalary = userSalaryFull => {
+            console.log(`Размер заработной платы за вычетом налогов равен: ${userSalaryFull * 0.87}`);
+        };
 
+        let userNumber2 = Number(prompt("Введите размер з.п.:"));
+        alert(typeof (userNumber2));
+        while (isNaN(userNumber2) || !userNumber2) {
+            userNumber2 = prompt(`Введенное значение задано неверно, пустое или равно нулю. Введите корректно размер з.п.:`);
+        }
+
+        calculateUserSalary(userNumber2);
         // Task_3
 
         // Task_4
